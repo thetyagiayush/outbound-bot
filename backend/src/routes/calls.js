@@ -1,5 +1,5 @@
 const express = require('express');
-const db = require('../lib/supabase');
+const db = require('../lib/db');
 const { placeCall } = require('../lib/twilio');
 const config = require('../config');
 const { requireAuth } = require('../middleware/auth');

@@ -29,10 +29,7 @@ module.exports = {
     language: process.env.TTS_LANGUAGE || 'en-US',
   },
 
-  supabase: {
-    url: process.env.SUPABASE_URL || '',
-    serviceKey: process.env.SUPABASE_SERVICE_KEY || '',
-  },
+  databaseUrl: process.env.DATABASE_URL || process.env.POSTGRES_URL || '',
 
   slack: {
     webhookUrl: process.env.SLACK_WEBHOOK_URL || '',

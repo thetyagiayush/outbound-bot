@@ -1,7 +1,7 @@
 const express = require('express');
 const multer = require('multer');
 const Papa = require('papaparse');
-const db = require('../lib/supabase');
+const db = require('../lib/db');
 const { decryptJson } = require('../lib/crypto');
 const { requireAuth } = require('../middleware/auth');
 

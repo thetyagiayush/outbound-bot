@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Runs on http://localhost:4000. Without Supabase keys it uses an in-memory store.
+Runs on http://localhost:4000. Without DATABASE_URL it uses an in-memory store.
 
 ## Routes
 
@@ -33,6 +33,9 @@ each call is created pointing back to this backend. Keep `TWILIO_VALIDATE_SIGNAT
 in production.
 
 ## Encryption
+
+Database is Neon (serverless Postgres). Set `DATABASE_URL` to the Neon connection
+string and run `db/schema.sql` once in the Neon SQL editor.
 
 Collected fields go through AES-256-GCM (`src/lib/crypto.js`) before they hit the DB,
 so the DB only stores ciphertext. They're decrypted in memory when the dashboard asks

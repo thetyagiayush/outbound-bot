@@ -27,8 +27,8 @@ npm install
 npm run dev
 ```
 
-Backend works without Supabase keys too (keeps data in memory) so you can test the
-call flow first. Add Supabase keys for real storage.
+Backend works without a DATABASE_URL too (keeps data in memory) so you can test the
+call flow first. Add the Neon DATABASE_URL for real storage.
 
 ## Generate the secrets
 

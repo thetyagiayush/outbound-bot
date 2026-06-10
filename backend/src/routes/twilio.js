@@ -1,7 +1,7 @@
 const express = require('express');
 const twilio = require('twilio');
 const config = require('../config');
-const db = require('../lib/supabase');
+const db = require('../lib/db');
 const { notifyNewLead } = require('../lib/slack');
 const { encryptJson } = require('../lib/crypto');
 

@@ -6,7 +6,7 @@ const authRoutes = require('./routes/auth');
 const contactRoutes = require('./routes/contacts');
 const callRoutes = require('./routes/calls');
 const twilioRoutes = require('./routes/twilio');
-const db = require('./lib/supabase');
+const db = require('./lib/db');
 
 const app = express();
 
@@ -24,7 +24,7 @@ app.get('/', (req, res) =>
   res.json({
     ok: true,
     service: 'twiml-outbound-backend',
-    db: db.isConfigured() ? 'supabase' : 'memory',
+    db: db.isConfigured() ? 'postgres' : 'memory',
     time: new Date().toISOString(),
   }),
 );
