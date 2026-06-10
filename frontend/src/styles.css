@@ -1,0 +1,80 @@
+:root {
+  --bg: #0f172a;
+  --panel: #ffffff;
+  --line: #e2e8f0;
+  --text: #0f172a;
+  --muted: #64748b;
+  --brand: #2563eb;
+  --brand-d: #1d4ed8;
+  --error: #dc2626;
+  --ok: #16a34a;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: #f1f5f9;
+}
+
+.muted { color: var(--muted); }
+.center { text-align: center; }
+.error { color: var(--error); margin-top: 8px; font-size: 14px; }
+.ok { color: var(--ok); margin-top: 8px; font-size: 14px; }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* ---- Auth ---- */
+.auth-wrap {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+.auth-card { width: 100%; max-width: 360px; display: flex; flex-direction: column; }
+.auth-card h1 { margin: 0 0 4px; font-size: 22px; }
+.auth-card label { font-size: 13px; margin: 14px 0 6px; color: var(--muted); }
+.auth-card input,
+.toolbar input[type='text'] {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+/* ---- Layout ---- */
+.page { max-width: 1000px; margin: 0 auto; padding: 24px; display: grid; gap: 16px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; }
+.topbar h1 { font-size: 20px; margin: 0; }
+
+.toolbar > div { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+
+/* ---- Buttons ---- */
+button, .btn {
+  cursor: pointer;
+  border: none;
+  background: var(--brand);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+button:hover, .btn:hover { background: var(--brand-d); }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+.ghost { background: #fff; color: var(--text); border: 1px solid var(--line); }
+.ghost:hover { background: #f8fafc; }
+.btn { display: inline-block; }
+
+/* ---- Table ---- */
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+tr:last-child td { border-bottom: none; }
